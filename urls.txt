@@ -1,0 +1,31 @@
+Currency exchange service URL
+http://localhost:8000/currency-exchange/from/USD/to/INR
+
+RESPONSE STRUCTURE
+{
+   "id":10001,
+   "from":"USD",
+   "to":"INR",
+   "conversionMultiple":65.00,
+   "environment":"8000 instance-id"
+}
+
+Currency conversion service URL (REST-TEMPLATE)
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+
+Currency conversion service URL (FEIGN)
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+RESPONSE STRUCTURE
+{
+  "id": 10001,
+  "from": "USD",
+  "to": "INR",
+  "conversionMultiple": 65.00,
+  "quantity": 10,
+  "totalCalculatedAmount": 650.00,
+  "environment": "8000 instance-id"
+}
+
+API GATEWAY
+http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
